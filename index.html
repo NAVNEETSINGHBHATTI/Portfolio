@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navneet- Developer Portfolio</title>
+
+    <!-- Google Fonts and Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+
+      /* Reset default margin and padding */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: blueviolet;
+        font-family: "Poppins", sans-serif;
+        color: white;
+      }
+
+      /* Sticky Header */
+      header {
+          position: sticky;
+          top: 0;
+          background-color: white; /* or your background */
+          z-index: 1000;
+             }
+      
+      /* Navigation Bar */
+      nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 80px;
+        background-color: rgb(74, 6, 142);
+      }
+      
+      nav ul {
+        display: flex;
+        justify-content: center;
+      }
+
+      nav ul li {
+        list-style: none;
+        margin: 0 23px;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+      }
+
+      nav ul li a:hover {
+        color: black;
+        font-size: 1.05rem;
+      }
+
+      .left {
+        font-size: 1.5rem;
+      }
+
+      /* Home Section */
+      #Home {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 60px 50px;
+      }
+
+      #Home > div {
+        width: 30%;
+      }
+
+      .leftSection {
+        width: 50%;
+        font-size: 2.17rem;
+      }
+
+      .rightSection img {
+        width: 87%;
+        margin: 60px 0;
+        border-radius: 15%;
+      }
+
+      .purple {
+        color: #1a176ce3;
+      }
+
+      #element {
+        color: #1a176ce3;
+      }
+
+      main hr {
+        border: 0;
+        background: #a765dd;
+        height: 3.5px;
+        margin: 65px 30px;
+      }
+
+      #About {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 30px 0;
+      }
+
+      #Projects {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 30px 0;
+      }
+
+      #Education {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 30px 0;
+      }
+
+      #Skilll {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 30px 0;
+      }
+
+      #About h1 {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 20px;
+      }
+
+      #Projects h1 {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 20px;
+      }
+
+      #Education h1 {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 20px;
+      }
+
+      #Skilll h1 {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 20px;
+      }
+
+      /* About Section */
+      .box > div {
+        width: 60%;
+      }
+
+      .box {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 48px 120px;
+        background: white;
+      }
+
+      .leftSide img {
+        width: 45%;
+        margin: 40px 216px;
+        border-radius: 50%;
+      }
+
+      .rightSide {
+        margin: 158px 50px;
+        font-size: 1.3rem;
+        color: black;
+        width: 50%;
+      }
+
+      /* Projects Section */
+      .box1 {
+        display: flex;
+        justify-content: space-around;
+        margin: 48px 120px;
+      }
+
+      .lefty {
+        background-color: white;
+        margin: 0 50px;
+        color: black;
+        width: 50%;
+        padding: 75px;
+      }
+
+      .heading {
+        font-size: 2rem;
+        font-weight: 900;
+        color: #6a2c8c;
+      }
+
+      .details {
+        font-size: 1.1rem;
+        text-align: justify;
+      }
+
+      .skills {
+        font-size: 1.1rem;
+        font-weight: 900;
+        color: #6a2c8c;
+      }
+
+      .righty {
+        background-color: white;
+        margin: 0 50px;
+        color: black;
+        width: 50%;
+        padding: 75px;
+      }
+
+      /* Education Section */
+      .box2 {
+        margin: 48px 120px;
+        width: 60rem;
+        padding: 20px 10px;
+      }
+
+      .up {
+        background-color: white;
+        margin: 0 0 140px 0;
+        padding: 10px;
+        border-radius: 18px;
+      }
+
+      .degree {
+        color: #5f5c5c;
+        font-size: 1.3rem;
+      }
+
+      .semi {
+        color: gray;
+      }
+
+      /* Skills Section */
+      .skills-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 40px;
+        background-color: #000;
+        width: 50rem;
+        margin: 110px;
+        border-radius: 35px;
+      }
+
+      .skill {
+        background-color: #9863cd;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-size: 16px;
+        white-space: nowrap;
+        font-family: sans-serif;
+        cursor: pointer;
+      }
+      
+      .skill:hover {
+      background-color: white;
+      color: #9b5de5;
+      transform: scale(1.05);
+      }
+
+      /* Resume Download Section */
+      .resume-section {
+        text-align: center;
+        color: white;
+        border-radius: 38px;
+        max-width: 75%;
+        margin: 50px auto;
+        background-color: black;
+        padding: 32px 0;
+      }
+
+      .resume-section h1 {
+        font-size: 2.8rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      .resume-section p {
+        font-size: 1.1rem;
+        margin-bottom: 40px;
+      }
+
+      .download-btn {
+        background-color: white;
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 15px 30px;
+        border-radius: 50px;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        transition: all 0.3s ease;
+        font-size: 1rem;
+      }
+
+      .download-btn:hover {
+        background-color: #f0f0f0;
+      }
+
+      /* Footer */
+      .footer {
+        background-color: rgb(74, 6, 142);;
+        padding: 30px 20px;
+        text-align: center;
+        color: white;
+        font-family: 'Segoe UI', sans-serif;
+        height: 80px;
+
+      }
+
+      .social-icons a {
+        margin: 0 10px;
+        font-size: 20px;
+        color: white;
+        text-decoration: none;
+      }
+
+      .footer-nav {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0;
+      }
+
+      .footer-nav li {
+        display: inline;
+        margin: 0 15px;
+      }
+
+      .footer-nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+      }
+
+      .footer-nav a:hover,
+      .social-icons a:hover {
+        color: #000000;
+      }
+
+      .copyright {
+        font-size: 14px;
+        margin-top: 10px;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav>
+        <div class="left">Navneet's Portfolio</div>
+        <div class="right">
+          <ul class="nav-menu">
+            <li><a href="#Home" class="nav-link">Home</a></li>
+            <li><a href="#About" class="nav-link">About </a></li>
+            <li><a href="#Projects" class="nav-link">Projects</a></li>
+            <li><a href="#Education" class="nav-link">Education</a></li>
+            <li><a href="#Skilll" class="nav-link">Skills</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Home -->
+      <section id="Home">
+        <div class="leftSection">
+          Hi, My name is <span class="purple">Navneet</span>
+          <div>and I am a passionate</div>
+          <span id="element"></span>
+        </div>
+        <div class="rightSection">
+          <img src="Images/first.jpg" alt="" />
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- About Me -->
+      <section id="About">
+        <h1>About Me</h1>
+
+        <div class="box">
+          <div class="leftSide">
+            <img src="Images/navpic.jpg" alt="" />
+          </div>
+          <div class="rightSide">
+            I'm <span class="purple">Navneet Singh Bhatti</span>, a dedicated
+            and detail-
+            <div>oriented web developer with a strong focus on</div>
+            <div>building modern, responsive, and high-performance</div>
+            <div>web applications.</div>
+            <br />
+            <div>I specialize in front-end development using JavaScript,</div>
+            <div>React and Tailwind CSS, and I'm passionate about</div>
+            <div>crafting clean, efficient code and intuitive user</div>
+            <div>experiences.</div>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- Projects -->
+      <section id="Projects">
+        <h1>Projects</h1>
+        <div class="box1">
+          <div class="lefty">
+            <div class="heading">Guess The Number Game</div>
+            <br />
+            <div class="details">
+              A simple and interactive number guessing game built with HTML,
+              CSS, and JavaScript. The player tries to guess a randomly
+              generated number within a certain range. After each guess, the
+              game provides feedback—whether the guess is too high, too low, or
+              correct. The game also tracks the number of attempts and allows
+              the player to restart and play again.
+            </div>
+            <br />
+            <div class="skills">Skills :HTML, CSS, JavaScript</div>
+          </div>
+          <div class="righty">
+            <div class="heading">Blog Website</div>
+            <br />
+            <div class="details">
+              A blog website is a platform to share articles or updates. Built
+              with React, it offers fast, dynamic, and responsive user
+              experiences using components and smooth navigation with React
+              Router. It's ideal for personal or professional content sharing
+            </div>
+            <br />
+            <div class="skills">Skills: React, Appwrite, JavaScript</div>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- Education -->
+      <section id="Education">
+        <h1>Education</h1>
+        <div class="box2">
+          <div class="up">
+            <div class="degree">
+              Bachelor Of Technology
+              <div>Computer Science And Engineering (Internet Of Things)</div>
+            </div>
+            <div class="semi">
+              Netaji Subhas University Of Technology
+              <div>(2021-2025)</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- Skills -->
+      <section id="Skilll">
+        <h1>Skills</h1>
+        <div class="skills-container">
+          <span class="skill">HTML5</span>
+          <span class="skill">Tailwind CSS</span>
+          <span class="skill">JavaScript</span>
+          <span class="skill">React</span>
+          <span class="skill">React Router </span>
+          <span class="skill">React Hook Form</span>
+          <span class="skill">TinyMCE</span>
+          <span class="skill">Tiny Cloud</span>
+          <span class="skill">Appwrite</span>
+          <span class="skill">Vite</span>
+          <span class="skill">Git</span>
+          <span class="skill">npm</span>
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- Resume -->
+      <div class="resume-section">
+        <h1>Download My Resume</h1>
+        <p>Get a detailed overview of my experience, skills, and achievements</p>
+        <a href="Resume/Navneet Singh Bhatti.pdf" download class="download-btn">
+          <i class="fa-solid fa-download"></i> Download Resume
+        </a>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+  
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/navneet-singh-251a28367/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/NAVNEETSINGHBHATTI/" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      <p class="copyright">©2021 Navneet Singh Bhatti | All Rights Reserved</p>
+
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      // Typed.js initialization for dynamic typing effect
+      var typed = new Typed("#element", {
+        strings: ["Web Developer ."],
+        typeSpeed: 50,
+        backSpeed: 50,
+        loop: true,
+      });
+    </script>
+    <script>
+        // Navigation Toggle
+        // Smooth scrolling for navigation links
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all navigation links
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    // Add click event listener to each navigation link
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent default anchor behavior
+            
+            // Get the target section ID from href attribute
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            
+            // Check if target section exists
+            if (targetSection) {
+                // Smooth scroll to target section
+                targetSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+                
+                // Optional: Add active class to current link
+                navLinks.forEach(navLink => navLink.classList.remove('active'));
+                this.classList.add('active');
+            }
+        });
+    });
+    
+    //  Highlight current section on scroll
+    window.addEventListener('scroll', function() {
+        let current = '';
+        const sections = document.querySelectorAll('section[id]');
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            
+            if (scrollY >= (sectionTop - 200)) {
+                current = section.getAttribute('id');
+            }
+        });
+        
+        // Update active navigation link
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
+    });
+});
+
+    </script>    
+  </body>
+</html>
