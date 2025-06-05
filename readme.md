@@ -22,11 +22,11 @@ This is my personal developer portfolio website built using HTML, CSS, and JavaS
 ## 📂 Project Structure
 
 portfolio/
-├── index.html
-├── assets/
-│ └── Images/
-│ └── Resume/
-└── README.md
+- ├── index.html
+- ├── assets/
+- │ └── Images/
+- │ └── Resume/
+- └── README.md
 
 
 ---
