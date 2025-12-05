@@ -13,6 +13,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="shortcut icon" href="Images//logo.png" type="image/x-icon">
     <style>
 
       /* Reset default margin and padding */
@@ -64,8 +65,9 @@
         font-size: 1.05rem;
       }
 
-      .left {
-        font-size: 1.5rem;
+      .logo {
+        width: 75px;
+        height: auto;
       }
 
       /* Home Section */
@@ -188,15 +190,15 @@
       .box1 {
         display: flex;
         justify-content: space-around;
-        margin: 48px 120px;
+        margin: 48px 50px;
       }
 
       .lefty {
         background-color: white;
-        margin: 0 50px;
+        margin: 0 40px;
         color: black;
         width: 50%;
-        padding: 75px;
+        padding: 40px;
       }
 
       .heading {
@@ -214,14 +216,6 @@
         font-size: 1.1rem;
         font-weight: 900;
         color: #6a2c8c;
-      }
-
-      .righty {
-        background-color: white;
-        margin: 0 50px;
-        color: black;
-        width: 50%;
-        padding: 75px;
       }
 
       /* Education Section */
@@ -361,14 +355,17 @@
         margin-top: 10px;
       }
 
-
     </style>
   </head>
   <body>
     <!-- Header -->
     <header>
       <nav>
-        <div class="left">Navneet's Portfolio</div>
+        <div class="left">
+          <video class="logo" autoplay loop muted playsinline>
+  <source src="video/logo.webm" type="video/mp4">
+</video>
+</div>
         <div class="right">
           <ul class="nav-menu">
             <li><a href="#Home" class="nav-link">Home</a></li>
@@ -439,7 +436,20 @@
             <br />
             <div class="skills">Skills :HTML, CSS, JavaScript</div>
           </div>
-          <div class="righty">
+          <div class="lefty">
+            <div class="heading">MediaStream</div>
+            <br />
+            <div class="details">
+              Built a scalable backend for a YouTube-like platform with secure
+              JWT authentication, Cloudinary media uploads, and engagement
+              features like likes, comments, playlists, tweets, and 
+              subscriptions. Uses MongoDB Aggregation Pipelines for optimized 
+              queries and follows clean MVC architecture. All APIs tested using Postman
+            </div>
+            <br />
+            <div class="skills">Skills: Express, MongoDb, NodeJs, JavaScript</div>
+          </div>
+          <div class="lefty">
             <div class="heading">Blog Website</div>
             <br />
             <div class="details">
@@ -479,15 +489,24 @@
       <section id="Skilll">
         <h1>Skills</h1>
         <div class="skills-container">
-          <span class="skill">HTML5</span>
-          <span class="skill">Tailwind CSS</span>
-          <span class="skill">JavaScript</span>
+          <span class="skill">NodeJS</span>
+          <span class="skill">Express</span>
+          <span class="skill">MongoDB</span>
           <span class="skill">React</span>
+          <span class="skill">Mongoose</span>
+          <span class="skill">JavaScript</span>
           <span class="skill">React Router </span>
           <span class="skill">React Hook Form</span>
+          <span class="skill">JWT</span>
+          <span class="skill">Bcrypt</span>
+          <span class="skill">Cloudinary</span>
+          <span class="skill">Postman</span>
+          <span class="skill">Rest Api</span>
           <span class="skill">TinyMCE</span>
           <span class="skill">Tiny Cloud</span>
           <span class="skill">Appwrite</span>
+          <span class="skill">HTML5</span>
+          <span class="skill">Tailwind CSS</span>
           <span class="skill">Vite</span>
           <span class="skill">Git</span>
           <span class="skill">npm</span>
@@ -514,7 +533,7 @@
             <a href="https://github.com/NAVNEETSINGHBHATTI/" target="_blank"><i class="fab fa-github"></i></a>
             <a href="www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
-      <p class="copyright">©2021 Navneet Singh Bhatti | All Rights Reserved</p>
+      <p class="copyright">©2023 Navneet Singh Bhatti | All Rights Reserved</p>
 
     </footer>
 
@@ -523,7 +542,7 @@
     <script>
       // Typed.js initialization for dynamic typing effect
       var typed = new Typed("#element", {
-        strings: ["Web Developer ."],
+        strings: ["Web Developer .","MERN Stack ."],
         typeSpeed: 50,
         backSpeed: 50,
         loop: true,
